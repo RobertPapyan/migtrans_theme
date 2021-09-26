@@ -29,8 +29,46 @@ $(document).ready(function(){
         easing:'easeOutBounce'
     });
 
-    //Animated numbers
+   
+    //Panels
     
+    $('.panel__open1').click((e)=>{
+        e.preventDefault();
+        $('.panel__heading1, .panel__content1, .panel__open1').toggleClass('maximized');
+        $('.panel__content1').slideToggle({duration:300,easing:"linear"});
+    });
+    $( ".panel__open1" ).trigger( "click" );
+    $('.panel__open2').click((e)=>{
+        e.preventDefault();
+        $('.panel__heading2, .panel__content2, .panel__open2').toggleClass('maximized');
+        $('.panel__content2').slideToggle(300);
+    });
+    $('.panel__open3').click((e)=>{
+        e.preventDefault();
+        $('.panel__heading3, .panel__content3, .panel__open3').toggleClass('maximized');
+        $('.panel__content3').slideToggle(300);
+    });
+
+    //Proggress bars
+    let progressed = false;
+    function runProgress(progressBar,percent){
+        progressBar.css({width:`${percent}%`});
+    }
+    $(window).scroll(function(){
+        let progressPosition = $('.faq-achievement').position().top;
+        let scrollPos = $(document).scrollTop();
+        if(scrollPos>=progressPosition-$(window).height()+500 && !progressed){
+            runProgress($('.prog1'),$('.percent1').html());
+            setTimeout(()=>{runProgress($('.prog2'),$('.percent2').html());},200);
+            
+            setTimeout(()=>{runProgress($('.prog3'),$('.percent3').html());},120);
+           
+            progressed = true;
+        }
+    });
+    
+   
+    //Animated numbers
     let animated = false;
     $(window).scroll(function(){
         let numPosition = $('.numbers').position().top;
@@ -54,7 +92,7 @@ $(document).ready(function(){
             animated = true;
         }
     });
-    
+
     function animate(numb1, numb2,finalNumb,startSpeed){
         let timerSpeed = 1;
         let speed = function(){
@@ -115,43 +153,6 @@ $(document).ready(function(){
 
       
     }
-    //Panels
-    
-    $('.panel__open1').click((e)=>{
-        e.preventDefault();
-        $('.panel__heading1, .panel__content1, .panel__open1').toggleClass('maximized');
-        $('.panel__content1').slideToggle({duration:300,easing:"linear"});
-    });
-    $('.panel__open2').click((e)=>{
-        e.preventDefault();
-        $('.panel__heading2, .panel__content2, .panel__open2').toggleClass('maximized');
-        $('.panel__content2').slideToggle(300);
-    });
-    $('.panel__open3').click((e)=>{
-        e.preventDefault();
-        $('.panel__heading3, .panel__content3, .panel__open3').toggleClass('maximized');
-        $('.panel__content3').slideToggle(300);
-    });
-
-    //Proggress bars
-    let progressed = false;
-    function runProgress(progressBar,percent){
-        progressBar.css({width:`${percent}%`});
-    }
-    $(window).scroll(function(){
-        let progressPosition = $('.faq-achievement').position().top;
-        let scrollPos = $(document).scrollTop();
-        
-        if(scrollPos>=progressPosition-$(window).height()+500 && !progressed){
-            runProgress($('.prog1'),$('.percent1').html());
-            setTimeout(()=>{runProgress($('.prog2'),$('.percent2').html());},200);
-            
-            setTimeout(()=>{runProgress($('.prog3'),$('.percent3').html());},120);
-           
-            progressed = true;
-        }
-    });
-    
     
     
 

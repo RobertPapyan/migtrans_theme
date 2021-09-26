@@ -324,19 +324,88 @@ function migtrans_customize_register( $wp_customize ) {
 			'default'=>__('Mikago arm towards the viewer gregor then turned to look out the window at the dull weather')
 		));
 		$wp_customize->add_control('footertext',array(
-			'label'=>'Footer text',
+			'label'=>'Logo text',
 			'section'=>'footer',
 			'priority'=>1,
 			'type'=>'textarea'
 		));
 
-		
+		$wp_customize->add_setting('footercontacttitle',array(
+			'default'=>__('Наши контакты')
+		));
+		$wp_customize->add_control('footercontacttitle',array(
+			'label'=>'Contact title',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footerphonenumber1',array(
+			'default'=>__('+(374) 99 666 179')
+		));
+		$wp_customize->add_control('footerphonenumber1',array(
+			'label'=>'Phone number 1',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footerphonenumber2',array(
+			'default'=>__('+(374) 93 179 666')
+		));
+		$wp_customize->add_control('footerphonenumber2',array(
+			'label'=>'Phone number 2',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footervibernumber',array(
+			'default'=>__('+(374) 99 666 179')
+		));
+		$wp_customize->add_control('footervibernumber',array(
+			'label'=>'Viber & WP number',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footermail',array(
+			'default'=>__('migtrans.transportation@mail.ru')
+		));
+		$wp_customize->add_control('footermail',array(
+			'label'=>'Email',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footerlocationtitle',array(
+			'default'=>__('Наш адресс')
+		));
+		$wp_customize->add_control('footerlocationtitle',array(
+			'label'=>'Location title',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
+		$wp_customize->add_setting('footerlocationaddress',array(
+			'default'=>__('РА, г.Ереван, ул. Ленинградян 4/4')
+		));
+		$wp_customize->add_control('footerlocationaddress',array(
+			'label'=>'Location address',
+			'section'=>'footer',
+			'priority'=>1,
+			
+		));
+
 	
 	
-	//About block customization
+	//Features section customization
 	$wp_customize->add_section('about',array(
-		'title'=>'About block',
-		'description'=>'About block customization section',
+		'title'=>'Features section',
+		'description'=>'Features section customization section',
 	));
 	$wp_customize->add_setting('abouttitle',array(
 		'default'=>__('О НАС')
@@ -402,9 +471,161 @@ function migtrans_customize_register( $wp_customize ) {
 	));
 	
 	
+	//Numbers block customization
+
+	$wp_customize->add_section('numbers',array(
+		'title'=>'Animated numbers',
+		'description'=>'Animated numbers customization section',
+	));
+
+	$wp_customize->add_setting('numberstitle1',array(
+		'default'=>__('лет')
+	));
+	$wp_customize->add_control('numberstitle1',array(
+		'label'=>'Title 1',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+	$wp_customize->add_setting('numberssubtitle1',array(
+		'default'=>__('успешной работы')
+	));
+	$wp_customize->add_control('numberssubtitle1',array(
+		'label'=>'Subtitle 1',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('numberstitle2',array(
+		'default'=>__('заказов')
+	));
+	$wp_customize->add_control('numberstitle2',array(
+		'label'=>'Title 2',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+	$wp_customize->add_setting('numberssubtitle2',array(
+		'default'=>__('мы получаем каждый месяц')
+	));
+	$wp_customize->add_control('numberssubtitle2',array(
+		'label'=>'Subtitle 2',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('numberstitle3',array(
+		'default'=>__('км')
+	));
+	$wp_customize->add_control('numberstitle3',array(
+		'label'=>'Title 3',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+	$wp_customize->add_setting('numberssubtitle3',array(
+		'default'=>__('в неделю преодолевают наши машины')
+	));
+	$wp_customize->add_control('numberssubtitle3',array(
+		'label'=>'Subtitle 3',
+		'section'=>'numbers',
+		'priority'=>1,
+	));
+
 	
-	
-	
+
+	//About us section customization
+
+	$wp_customize->add_section('aboutus',array(
+		'title'=>'About us',
+		'description'=>'About us customization section',
+	));
+
+	$wp_customize->add_setting('aboutustitle',array(
+		'default'=>__('ABOTUT US')
+	));
+	$wp_customize->add_control('aboutustitle',array(
+		'label'=>'Title',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+	$wp_customize->add_setting('aboutussubtitle',array(
+		'default'=>__('Check out what we do for our customers!')
+	));
+	$wp_customize->add_control('aboutussubtitle',array(
+		'label'=>'Subtitle',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutustext',array(
+		'default'=>__('Picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull')
+	));
+	$wp_customize->add_control('aboutustext',array(
+		'label'=>'Text',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutusphonetitle',array(
+		'default'=>__('Call Center')
+	));
+	$wp_customize->add_control('aboutusphonetitle',array(
+		'label'=>'Phone title',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutusphonenumber',array(
+		'default'=>__('Sat - Fri day (888) 254-6544-5441')
+	));
+	$wp_customize->add_control('aboutusphonenumber',array(
+		'label'=>'Phone number',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutuslocationtitle',array(
+		'default'=>__('Location')
+	));
+	$wp_customize->add_control('aboutuslocationtitle',array(
+		'label'=>'Location title',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutuslocationaddress',array(
+		'default'=>__('21/1 Dreem city new town, Agarog, Dustria')
+	));
+	$wp_customize->add_control('aboutuslocationaddress',array(
+		'label'=>'Location address',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutusbutton',array(
+		'default'=>__('Оставить заявку')
+	));
+	$wp_customize->add_control('aboutusbutton',array(
+		'label'=>'Button text',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutusbuttonurl',array(
+		'default'=>__('#')
+	));
+	$wp_customize->add_control('aboutusbuttonurl',array(
+		'label'=>'Button url',
+		'section'=>'aboutus',
+		'priority'=>1,
+	));
+
+	$wp_customize->add_setting('aboutusimg',array(
+		'default'=> get_bloginfo('template_url') . '/assets/img/metro.jpg'
+	));
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'aboutusimg',array(
+		'label'=>'Image',
+		'section'=>'aboutus',
+		'priority'=>1
+	)));
 if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',

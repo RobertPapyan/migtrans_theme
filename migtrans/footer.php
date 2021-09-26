@@ -25,16 +25,16 @@
                         </p>
                     </div>
                     <div class="footer__item">
-                        <div class="footer__item__title">Наши контакты</div>
-                        <div class="footer__item__text footer__item__text__phone">+(374) 99 666 179 <br> +(374) 93 179 666</div>
-                        <div class="footer__item__text footer__item__text__wpviber">+(374) 99 666 179</div>
-                        <div class="footer__item__text footer__item__text__mail">migtrans.transportation@mail.ru</div>
+                        <div class="footer__item__title"><?php echo get_theme_mod('footercontacttitle')?></div>
+                        <div class="footer__item__text footer__item__text__phone"><?php echo get_theme_mod('footerphonenumber1')?> <br> <?php echo get_theme_mod('footerphonenumber2')?></div>
+                        <div class="footer__item__text footer__item__text__wpviber"><?php echo get_theme_mod('footervibernumber')?></div>
+                        <div class="footer__item__text footer__item__text__mail"><?php echo get_theme_mod('footermail')?></div>
                     
                     </div>
                     
                     <div class="footer__item">
-                        <div class="footer__item__title">Наш адресс</div>
-                        <div class="footer__item__text footer__item__text__location">РА, г.Ереван, ул. Ленинградян 4/4</div>
+                        <div class="footer__item__title"><?php echo get_theme_mod('footerlocationtitle')?></div>
+                        <div class="footer__item__text footer__item__text__location"><?php echo get_theme_mod('footerlocationaddress')?></div>
                     </div>
                     
                 </div>

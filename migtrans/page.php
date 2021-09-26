@@ -22,7 +22,11 @@ get_header();
 				get_template_part('includes/landing-content','content');
 			};
 			get_template_part('includes/page-content','content');
-			if(is_front_page()){
+			if(is_page('About')){
+				get_template_part('includes/about-us-block','content');
+			}
+			if(is_front_page() || is_page('About')){
+				
 				get_template_part('includes/faq-achievement-block','content');
 			};
 		?>
